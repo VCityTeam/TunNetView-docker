@@ -18,7 +18,7 @@ RUN apt-get install -y git
 RUN git --version
 
 ######### Install TunNetView
-ARG checkoutName=master
+ARG checkoutName=cc7b1c9c65b0708c46a3292c07f93c265de5d347
 RUN git clone https://github.com/VCityTeam/TunNetView.git
 WORKDIR TunNetView
 RUN git checkout $checkoutName
