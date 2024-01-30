@@ -24,6 +24,8 @@ WORKDIR TunNetView
 RUN git checkout $checkoutName
 RUN npm install
 RUN npx webpack --config webpack.config.js
+
+### Service the client code
 RUN npm install http-server -g
 
 CMD [ "http-server", "-p", "8080" ]
