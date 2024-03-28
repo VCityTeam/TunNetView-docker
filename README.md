@@ -6,7 +6,14 @@ This container packages the TunNetView
 Build the docker image with
 
 ```bash
-docker build [--build-arg checkoutName=master] -t vcity/tunnetview Context
+docker build -t vcity/tunnetview https://github.com/VCityTeam/TunNetView-docker.git -f Context/Dockerfile
+```
+
+Additionnaly you might wish to specify a [TunNetView](https://github.com/VCityTeam/TunNetView)
+commit number e.g.
+
+```bash
+docker build --build-arg checkoutName=9e79839f158f4  -t vcity/tunnetview https://github.com/VCityTeam/TunNetView-docker.git -f Context/Dockerfile
 ```
 
 Then run the container e.g. with
