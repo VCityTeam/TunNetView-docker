@@ -28,4 +28,4 @@ RUN npx webpack --config webpack.config.js
 ### Service the client code
 RUN npm install http-server -g
 
-CMD [ "http-server", "-p", "8080" ]
+CMD [ "http-server", "--cors", "-p", "8080" ]
