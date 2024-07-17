@@ -26,6 +26,6 @@ RUN npm install
 RUN npx webpack --config webpack.config.js
 
 ### Service the client code
-RUN npm install http-server -g
+# RUN npm install http-server -g
 
-CMD [ "http-server", "--cors", "-p", "8080" ]
+CMD [ "npm", "run", "start" ]
