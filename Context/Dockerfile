@@ -23,9 +23,7 @@ RUN git clone https://github.com/VCityTeam/TunNetView.git
 WORKDIR TunNetView
 RUN git checkout camera-controller
 RUN npm install
-RUN npx webpack --config webpack.config.js
+RUN npm run build
 
 ### Service the client code
-# RUN npm install http-server -g
-
 CMD [ "npm", "run", "start" ]
