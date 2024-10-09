@@ -18,10 +18,10 @@ RUN apt-get install -y git
 RUN git --version
 
 ######### Install TunNetView
-ARG checkoutName=7abfc62fb7656d355bf96c4bb1253bf66d6d1181
+ARG checkoutName=4e29d691637197c3900bc55c54d5af211896e1ef
 RUN git clone https://github.com/VCityTeam/TunNetView.git
 WORKDIR TunNetView
-RUN git checkout camera-controller
+RUN git checkout $checkoutName
 RUN npm install
 RUN npm run build
 
